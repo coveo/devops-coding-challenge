@@ -15,7 +15,7 @@ The tool is a shell command line utility that returns information over all [S3](
 
 ## Time allowed
 
-People who have successfully passed the challenge and are now happy members of the Coveo team usually take from 4 to 10 hours to complete the challenge.
+People who have successfully passed the challenge and are now happy members of the Coveo team usually take from 4 to 10 hours to complete it.
 
 Remember the KISS principle...
 
