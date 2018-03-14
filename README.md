@@ -10,12 +10,12 @@ The tool is a shell command line utility that returns information over all [S3](
 
 - Your tool must work on Linux, OSX and Windows.
 - It must be easy to install and use.
-- Ideally, your tool won't requires installation of any other tools / libraries / framework to work.
+- Ideally, your tool won't requires installation of any other tools / libraries / frameworks to work.
 - Time is money, we cannot afford running a tool that takes hours to complete, your solution shall return results within seconds (or minutes if you are willing to test our patience :-).
 
 ## Time allowed
 
-People who have successfully passed the challenge and are now happy members of the Coveo team usually take from 4 to 10 hours to complete it.
+People who have successfully passed the challenge and are now happy members of the Coveo team usually took from 4 to 10 hours to complete it.
 
 Remember the KISS principle...
 
@@ -26,7 +26,7 @@ Remember the KISS principle...
 - Number of files
 - Total size of files
 - Last modified date (most recent file of a bucket)
-- And the most important of all, **how does it cost**
+- And the most important of all, **how much does it cost**
 
 ### The following options should be supported
 
