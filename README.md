@@ -10,8 +10,8 @@ The tool is a shell command line utility that returns information over all [S3](
 
 - Your tool must work on Linux, OSX and Windows.
 - It must be easy to install and use.
-- Ideally, your tool won't requires installation of any other tools / libraries / framework to work.
-- Time is money, we cannot afford running a tool that takes hours to complete, your solution shall return results within seconds (or minutes if you are willing to test our patience :-).
+- Ideally, your tool won't require installation of any other tools / libraries / framework to work.
+- Time is money, we cannot afford running a tool that takes hours to complete, your solution should return results within seconds (or minutes if you are willing to test our patience :-).
 
 ## Time allowed
 
@@ -19,14 +19,14 @@ People who have successfully passed the challenge and are now happy members of t
 
 Remember the KISS principle...
 
-### The tool must returns the following information
+### The tool must return the following information
 
 - Bucket name
 - Creation date (of the bucket)
 - Number of files
 - Total size of files
 - Last modified date (most recent file of a bucket)
-- And the most important of all, **how does it cost**
+- And the most important of all, **how much does it cost**
 
 ### The following options should be supported
 
@@ -45,9 +45,9 @@ Some statistics to check the percentage of space used by a bucket, or any other 
 
 - Your are free to use the programming language and the [SDK](https://aws.amazon.com/tools/) of your choice, but remember that installation must not require us to install external tools in order to test the result of your work.
 - We will test your work over our environment (which contains **several millions of files**). The overall performance of your tool will be evaluated.
-- Your code must be made available on GitHub or any other public version control software. Your project must be a standalone project (i.e. not fork any other project).
+- Your code must be made available on GitHub or any other public version control software. Your project must be a standalone project (i.e. do not fork any other project).
 
-## Advices
+## Advice
 
 - **Try to design and implement your solution as you would do for real production code**. Show us how you create clean, maintainable code that does awesome stuff. Build something that we'd be happy to contribute to. This is not a programming contest where dirty hacks win the game.
 - Feel free to add more features! Really, we're curious about what you can think of. We'd expect the same if you worked with us.
