@@ -21,30 +21,38 @@ Remember the KISS principle...
 
 ### The tool must return the following information
 
-- Bucket name
-- Creation date (of the bucket)
+For each bucket:
+- Name
+- Creation date
 - Number of files
 - Total size of files
-- Last modified date (most recent file of a bucket)
+- Last modified date of the most recent file
 - And the most important of all, **how much does it cost**
 
 ### The following options should be supported
 
-- Ability to get the size results in bytes, KB, MB, ...
-- Organize the information by [storage type](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) (Standard, IA, RR)
-- Filter the results in a list of buckets (bonus point for regex support)
-- Ability to group information by [regions](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+- Display
+  - Ability to get the size results in bytes, kB, MB, ...
+  - Ability to group buckets by [regions](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+
+- Filters
+  - By bucket name
+  - By [storage type](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) (Standard, IA, RR). You may provide stats on the objects in the buckets (how many have which storage type) and/or add a filter on storage type (the bucket data would only reflect the objects that have the chosen storage type).
 
 ### Some additional features that could be useful (optional)
 
-It would be nice to support prefix in the bucket filter (e.g.: s3://mybucket/Folder/SubFolder/log*). It may also be useful to organize the results according to the [encryption type](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html), get additional buckets information (life cycle, cross-region replication, etc.) or take into account the [previous file versions](https://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html) in the count + size calculation.
+It would be nice to:
+- Support prefixes, glob and/or regexes in the bucket filter (e.g.: s3://mybucket/Folder/SubFolder/log*).
+- Organize the results according to the [encryption type](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html)
+- Get additional buckets information (life cycle, cross-region replication, etc.)
+- Take into account the [previous file versions](https://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html) in the count + size calculation.
 
 Some statistics to check the percentage of space used by a bucket, or any other good ideas you could have, are more than welcome.
 
 ## Rules
 
 - Your are free to use the programming language and the [SDK](https://aws.amazon.com/tools/) of your choice, but remember that installation must not require us to install external tools in order to test the result of your work.
-- We will test your work over our environment (which contains **several millions of files**). The overall performance of your tool will be evaluated.
+- We will test your work in our environment (which contains **several millions of files**). The overall performance of your tool will be evaluated. Most of the projects we receive take weeks to run in our environment, can you do better?
 - Your code must be made available on GitHub or any other public version control software. Your project must be a standalone project (i.e. **do not fork it from our challenge or any other project**).
 
 ## Advice
