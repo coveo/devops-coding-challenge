@@ -10,19 +10,10 @@ Afin de tester ton outil, tu peux te créer un compte gratuit sur [Amazon](http:
 
 L’outil doit se présenter sous forme d’une commande shell qui permet d’obtenir des informations sur l’ensemble des ressources [S3](https://aws.amazon.com/documentation/s3/) d’un compte Amazon.
 
-- Votre outil doit fonctionner sous Linux, OSX et Windows.
+- Ton outil doit fonctionner sous Linux, OSX et Windows.
 - Il doit être simple à installer et à utiliser.
-- Idéalement, votre outils ne devrait pas nécessiter l'installation de libraries et / ou outils externes pour être fonctionnel.
-- Le temps est de l'argent, nous ne pouvons pas attendre des heures pour obtenir des résultats. Votre solution devrait nous retourner des réponses en secondes (ou en minutes si vous tenez à tester notre patience :-).
-
-### L’outil doit permettre d’obtenir les informations suivantes:
-
-- Nom du bucket
-- Date de création
-- Nombre de fichiers
-- Taille totale des fichiers
-- Dernière date de mise-à-jour
-- Et le plus important de tous, **combien ça coûte...**
+- Idéalement, ton outil ne devrait pas nécessiter l'installation de libraries et / ou outils externes pour être fonctionnel.
+- Le temps est de l'argent, nous ne pouvons pas attendre des heures pour obtenir des résultats. Ta solution devrait nous retourner des réponses en quelques secondes (ou en quelques minutes si tu tiens à tester notre patience :-).
 
 ### Temps alloué
 
@@ -30,24 +21,41 @@ Ceux qui ont réussi avec succès ce challenge et qui sont maintenant d'heureux 
 
 Chez Coveo, on aime bien le principe KISS.
 
+### L’outil doit permettre d’obtenir les informations suivantes:
+
+Pour chaque bucket:
+  - Nom
+  - Date de création
+  - Nombre de fichiers
+  - Taille totale des fichiers
+  - Date de mise-à-jour de l'objet le plus récent
+  - Et le plus important de tous, **combien ça coûte...**
+
 ### Les options suivantes doivent être supportées:
 
-- Possibilité de sortir les résultats en octets, Kilooctets, Megaoctets, … ;
-- Pouvoir sortir les informations par [type de stockage](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) (Standard, IA, RR) ;
-- Pouvoir spécifier une liste de buckets (bonus si support des expressions régulières) ;
-- Pouvoir regrouper les informations par [régions](http://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/using-regions-availability-zones.html).
+- Affichage
+  - Possibilité de sortir les résultats en octets, kilooctets, Mégaoctets, etc.
+  - Pouvoir grouper les buckets par [régions](https://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+  
+- Filtres
+  - Par nom de bucket
+  - Par [type de stockage](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) (Standard, IA, RR). Tu peux fournir des stats sur les objets dans le bucket (la quantité par type de stockage) et / ou ajouter un filtre sur le type de stockage (les informations sur le bucket réflètent alors seulement les objets qui ont le type sélectionné)
 
-### Idées de fonctionnalités supplémentaires
+### Idées de fonctionnalités supplémentaires (optionnel)
 
-Il serait bien de pouvoir filtrer les fichiers considérés dans le calcul à l’aide d’un préfixe (ex: s3://mybucket/Folder/SubFolder/log*). Il est également utile de pouvoir filtrer ou organiser les résultats selon le [type d'encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html), d’obtenir des informations supplémentaires sur les buckets (Life cycle, cross-region replication, etc.) ou de tenir compte des [versions précédentes](https://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html) des fichiers (nombre + taille).
+Il serait bien de pouvoir:
+- Filtrer les fichiers considérés dans le calcul à l’aide d’un préfixe, un glob et / ou une expression régulière (ex: s3://mybucket/Folder/SubFolder/log*).
+- Filtrer ou organiser les résultats selon le [type d'encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html)
+- Obtenir des informations supplémentaires sur les buckets (Life cycle, cross-region replication, etc.)
+- Tenir compte des [versions précédentes](https://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html) des fichiers (nombre + taille).
 
 Des statistiques pour afficher le pourcentage de l’espace total occupé par un bucket ou toute autre bonne idée que tu pourrais avoir sont également les bienvenues.
 
 ### Plus d'informations
 
 - Tu es libre d’utiliser le langage et le [SDK](https://aws.amazon.com/tools/) de ton choix, mais souviens-toi que l'installation ne doit pas dépendre d'outils externes ;
-- Nous allons tester le fruit de ton travail sur notre environnement qui, soit dit en passant, **contient des millions de fichiers**. La performance globale de la solution proposée est donc à considérer ;
-- Ton code doit être disponible à partir de GitHub ou n'importe quel gestionnaire de code source publique. Tu ne dois pas faire de "fork" de notre challenge ou de n'importe quel autre projet.
+- Nous allons tester le fruit de ton travail sur notre environnement qui, soit dit en passant, **contient des millions de fichiers**. La performance globale de la solution proposée est donc à considérer. La plupart des projets que nous recevons prendrait des semaines à rouler dans notre environnement. Peux-tu faire mieux? ;
+- Ton code doit être disponible à partir de GitHub ou n'importe quel gestionnaire de code source publique. **Tu ne dois pas faire de "fork" de notre challenge ou de n'importe quel autre projet**.
 
 ## Conseils
 
