@@ -21,22 +21,23 @@ Ceux qui ont réussi avec succès ce challenge et qui sont maintenant d'heureux 
 
 Chez Coveo, on aime bien le principe KISS.
 
-### L’outil doit permettre d’obtenir les informations suivantes:
+### L’outil doit permettre d’obtenir les informations suivantes
 
 Pour chaque bucket:
-  - Nom
-  - Date de création
-  - Nombre de fichiers
-  - Taille totale des fichiers
-  - Date de mise-à-jour de l'objet le plus récent
-  - Et le plus important de tous, **combien ça coûte...**
 
-### Les options suivantes doivent être supportées:
+- Nom
+- Date de création
+- Nombre de fichiers
+- Taille totale des fichiers
+- Date de mise-à-jour de l'objet le plus récent
+- Et le plus important de tous, **combien ça coûte...**
+
+### Les options suivantes doivent être supportées
 
 - Affichage
   - Possibilité de sortir les résultats en octets, kilooctets, Mégaoctets, etc.
   - Pouvoir grouper les buckets par [régions](https://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
-  
+
 - Filtres
   - Par nom de bucket
   - Par [type de stockage](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) (Standard, IA, RR). Tu peux fournir des stats sur les objets dans le bucket (la quantité par type de stockage) et / ou ajouter un filtre sur le type de stockage (les informations sur le bucket réflètent alors seulement les objets qui ont le type sélectionné)
@@ -44,6 +45,7 @@ Pour chaque bucket:
 ### Idées de fonctionnalités supplémentaires (optionnel)
 
 Il serait bien de pouvoir:
+
 - Filtrer les fichiers considérés dans le calcul à l’aide d’un préfixe, un glob et / ou une expression régulière (ex: s3://mybucket/Folder/SubFolder/log*).
 - Filtrer ou organiser les résultats selon le [type d'encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html)
 - Obtenir des informations supplémentaires sur les buckets (Life cycle, cross-region replication, etc.)

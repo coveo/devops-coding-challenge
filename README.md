@@ -22,6 +22,7 @@ Remember the KISS principle...
 ### The tool must return the following information
 
 For each bucket:
+
 - Name
 - Creation date
 - Number of files
@@ -42,6 +43,7 @@ For each bucket:
 ### Some additional features that could be useful (optional)
 
 It would be nice to:
+
 - Support prefixes, glob and/or regexes in the bucket filter (e.g.: s3://mybucket/Folder/SubFolder/log*).
 - Organize the results according to the [encryption type](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html)
 - Get additional buckets information (life cycle, cross-region replication, etc.)
